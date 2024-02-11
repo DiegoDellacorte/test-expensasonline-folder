@@ -24,10 +24,7 @@ Este proyecto se ha creado como parte del desafío para Diego Canteros. Se han d
      }
      ```
 
-2. **Poder generar un lote de cobro**
-   - **Endpoint:** `http://localhost:8080/index.php/cron/cobros`
-
-3. **Consultar el detalle del lote.**
+2. **Consultar el detalle del lote.**
    - **Endpoint:** `http://localhost:8080/index.php/getcobros`
    - **Método:** `GET`
    - **Respuesta de Ejemplo:**
@@ -38,7 +35,7 @@ Este proyecto se ha creado como parte del desafío para Diego Canteros. Se han d
       }
      ```
 
-4. **Consultar el monto total y cantidad de cobros por lote**
+3. **Consultar el monto total y cantidad de cobros por lote**
    - **Endpoint:** `http://localhost:8080/index.php/getcobros/total`
    - **Método:** `GET`
    - **Respuesta de Ejemplo:**
@@ -49,7 +46,7 @@ Este proyecto se ha creado como parte del desafío para Diego Canteros. Se han d
       }
      ```
 
-5. **Consultar los datos de las suscripciones activas.**
+4. **Consultar los datos de las suscripciones activas.**
    - **Endpoint:** `http://localhost:8080/index.php/getsuscripcionesactivas`
    - **Método:** `GET`
    - **Respuesta de Ejemplo:**
@@ -60,7 +57,10 @@ Este proyecto se ha creado como parte del desafío para Diego Canteros. Se han d
       }
      ```
 
-6. **Ejecucion de migraciones para la creacion de las tablas de base de datos.**
+5. **Ejecucion de migraciones para la creacion de las tablas de base de datos.**
    - **Endpoint:** `http://localhost:8080/index.php/migrations`
    - **Método:** `GET`
 
+6. **Poder generar un lote de cobro**
+   - **Endpoint:** `http://localhost:8080/index.php/cron/cobros`
+   - **Método:** `GET`
