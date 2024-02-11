@@ -14,8 +14,7 @@ class Cliente_model extends CI_Model {
 			$client = $this->db->insert('cliente',array('name'=> $data['name'],'email'=> $data['email']));
 			$cliente_id = $this->db->insert_id();
 			$suscripcion = $this->db->insert('suscripciones',array('cliente'=> $cliente_id,'pago'=> $data['pago'], 'plan' => $data['plan'], 'fecha' => date('Y-m-d H:i:s') ));
-			$suscripcion_id = $this->db->insert_id();
-			//$cobro = $this->db->insert('cobros',array('suscripcion'=> $suscripcion_id, 'fecha' => date('Y-m-d H:i:s') ));
+			$suscripcion_id = $this->db->insert_id();			
 		}
 
 		return $cliente_id;

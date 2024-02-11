@@ -23,19 +23,11 @@ class Cliente extends CI_Controller {
 			'pago' => $this->input->post('pago'),
 			'plan' => $this->input->post('plan'),
 		);
-		$this->load->library('header',array('inicio','cliente'));
-		$data['menu'] = $this->header->menu();
-		$data['planes'] = $this->plan_model->getPlanes();
-		$data['pagos'] = $this->pagos_model->getFormasDePago();
 		if ($this->form_validation->run() === FALSE) {
-			$data['error'] = '<h4 style="color:red;">Completar el formulario</h4>';
-			
+			$data['error'] = '<h4 style="color:red;">Completar el formulario</h4>';			
             $this->load->view('form',$data);
         } else {            
-			$cliente = $this->cliente_model->crearCliente($suscripcion);            			
-			$data['cliente'] = $cliente;
-			//redirect('cliente/suscrito', 'refresh');
-			//redirect('cliente/suscrito');
+			$cliente = $this->cliente_model->crearCliente($suscripcion);   
 			echo "Te has suscriptio exitosamente";
         }
 	
