@@ -56,7 +56,7 @@ class Cobros_model extends CI_Model {
 
 			$query = $this->db->get();
 			if($query->num_rows() > 0){ 
-				return $query;
+				continue;
 			}else{
 				$cobro = $this->db->insert('cobros',array('suscripcion'=> $suscripcion->id, 'fecha' => date('Y-m-d H:i:s') ));
 			}

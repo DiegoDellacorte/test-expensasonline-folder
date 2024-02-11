@@ -28,7 +28,14 @@ class Cliente extends CI_Controller {
             $this->load->view('form',$data);
         } else {            
 			$cliente = $this->cliente_model->crearCliente($suscripcion);   
-			echo "Te has suscriptio exitosamente";
+			$respons['status'] = 404;
+			if ($cliente) {
+				$respons['status'] = 200;
+				$respons['msj'] = "Te has suscriptio exitosamente";
+			} else {            
+				$respons['msj'] = 'No se encontraron cobros.';
+			}
+			echo json_encode($respons);			
         }
 	
 	}	
